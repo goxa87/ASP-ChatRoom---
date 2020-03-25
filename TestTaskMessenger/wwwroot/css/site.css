@@ -1,0 +1,275 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a {
+    color:#b96246;
+    font-size:20px;
+}
+    a:hover {
+        color:#efc684;
+    }
+
+h1 {
+    text-align:center;
+}
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html {
+  font-size: 16px;
+  font-family: 'Comic Sans MS';
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* МОИ СТИЛИ*/
+
+/*
+    #22475a темный синий
+    #6f4342 темный бордовый
+    #b96246 темный оранжевый
+    #ef8d50 светлый оранжевый
+    #efc684 песок
+*/
+
+
+.main {
+}
+
+#account-conotainer {
+    background-color: #22475a;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    width: 50vh;
+    height: 50vh;
+}
+
+#chat-conotainer {
+    background-color: #22475a;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15vh;
+    width: 100vh;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+#chat-header {
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #efc684;
+}
+
+.chat-body {
+    display: flex;
+    justify-items: stretch;
+    max-height: 700px;
+    flex-basis: 1000px;
+}
+
+.chat-users-list {
+    overflow-y: auto;
+    max-height: 440px;
+    padding: 16px;
+    color: #efc684;
+    width: 300px;
+}
+
+
+.opponent {
+    padding: 4px;
+    margin: 0 0 4px 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    
+}
+
+.selected-opponent {
+    background-color: #b96246;
+}
+
+.unselected-opponent {
+    background-color: #6f4342;
+}
+
+.chat-message-list {
+    flex-grow: 3;
+    overflow-y: auto;
+    max-height:440px;
+    padding: 16px;
+    border-left: 3px solid #b96246;
+}
+
+.message {
+    border: 1px dotted black;
+    margin: 0 0 4px 0;
+    padding: 0 4px 8px 4px;
+    background-color:#ffffff11
+}
+
+.message-title {
+    font-size: 14px;
+    color: #ef8d50;
+}
+
+.message-body {
+    margin:0 0;
+    color: #efc684;
+    font-size:18px;
+}
+
+.message-footer {
+    color: #ef8d5080;
+    font-size: 10px;
+}
+.chat-footer {
+    position: relative;
+    bottom: 0;
+    border-top: 3px solid #b96246;
+    left: 0;
+    width: 100%;
+    padding: 0 16px 16px 16px;
+}
+
+    .chat-footer .btn-send-message {
+        padding: 4px 24px;
+        border-radius: 4px;
+        color: #efc684;
+        background-color: #22475a;
+        border: 1px solid #6f4342;
+    }
+
+.chat-footer .btn-send-message:hover {
+    color: #22475a;
+    background-color: #efc684;
+}
+
+.chat-footer textarea {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    text-wrap: normal;
+    background-color: #efc684;
+    color: black;
+    resize: none;
+    border: 1px solid #6f4342;
+}
+
+
+.chat-footer label {
+    color: #efc684;
+}
+
+.secret {
+    display:none;
+}
+
+/****              формы*/
+
+.form {
+    width:30vh;
+
+    border:1px solid black;
+    border-radius:4px;
+
+    background-color:#22475a;
+    margin:auto;
+    padding: 12px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:start;
+}
+
+    .form label {
+        color:#efc684;
+        
+    }
+
+    .form input[type="text"] {
+        background-color: #6f4342;
+        color: #efc684;
+        border-radius: 4px;
+        padding:4px;
+        border:1px solid black;
+        width: 100%;
+    }
+
+    .form input[type="submit"] {
+        background-color: #6f4342;
+        color: #efc684;
+        padding: 4px;
+        border: 1px solid black;
+        border-radius: 4px;
+        margin-top:12px;
+    }
+
+        .form input[type="submit"]:hover {
+            background-color: #efc684;
+            color: #6f4342;
+        }

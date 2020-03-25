@@ -1,0 +1,26 @@
+﻿@model TestTaskMessenger.ViewModels.LoginVM
+@{
+    ViewData["Title"] = "ЛОГИСТРАЦИЯ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="account container">
+        <h1>ЗАЛОГИНЬСЯ</h1>
+        <form class="form" asp-antiforgery="true" asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <label asp-for="LoginUser"></label>
+            <input type="text" asp-for="LoginUser" />
+            <span asp-validation-for="LoginUser"></span>
+
+            <label asp-for="Password"></label>
+            <input type="text" asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+
+            <input type="submit" value="Войти" />
+            <a asp-action="Registration">Регистрация</a>
+        </form>
+
+        
+     </div>
+
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -1,0 +1,45 @@
+﻿@model TestTaskMessenger.ViewModels.ChatRoomVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="chat-conotainer">
+    <div id="chat-header">
+        <span>ВЫ: @Model.Login</span>
+        <span>Говорите с: </span>
+        <span id="opponent-name">Общий чат</span>
+    </div>
+    <div class="chat-body">
+        <div class="chat-users-list">
+            @foreach (var user in Model.Opponents)
+            { 
+                <div class="opponent unselected-opponent">
+                    <span class="opponent-pseudonym">@user.Pseudonym</span>
+                    <span class="opponent-id secret">@user.OpponentId</span>
+                </div>
+            }
+            
+        </div>
+        <div class="chat-message-list">
+            @foreach (var message in Model.Messages)
+            {
+                <div class="message">
+                    <span class="message-title">@message.Date.ToString("dd.MM.yy - hh.mm") - @message.SenderName</span>
+                    <p class="message-body">@message.Text</p>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="chat-footer">
+        <!--Здесь  0 потому-что при начальной иициализации будет общий чат и по-этому
+        в это поле ставим сразу 0 как признак общего чата-->
+
+        <label>Сообщение: </label>
+        <span id="opponent" class="secret">0</span>
+        <span id="login" class="secret">@Model.Login</span>
+        <span id="password" class="secret">@Model.Password</span>
+        <textarea id="text-value"></textarea><br>
+        <button class="btn-send-message">ОТПРАВИТЬ</button>
+    </div>
+</div>
+

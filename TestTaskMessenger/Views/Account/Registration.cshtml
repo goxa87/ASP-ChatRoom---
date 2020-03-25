@@ -1,0 +1,27 @@
+﻿@model TestTaskMessenger.ViewModels.RegistrationVM
+@{
+    ViewData["Title"] = "РЕГИСТРАЦИЯ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="account container">
+        <h1>ЗАРЕГАЙСЯ</h1>
+        <form class="form" asp-antiforgery="true" asp-action="Registration" method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+
+            <label asp-for="Pseudonym"></label>
+            <span asp-validation-for="Pseudonym"></span>
+            <input type="text" asp-for="Pseudonym" />
+
+            <label asp-for="LoginUser"></label>
+            <span asp-validation-for="LoginUser"></span>
+            <input type="text" asp-for="LoginUser" />
+
+            <label asp-for="Password"></label>
+            <span asp-validation-for="Password"></span>
+            <input type="text" asp-for="Password" />
+
+            <input type="submit" value="Регистрация" />
+        </form>
+    </div>
+
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
